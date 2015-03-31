@@ -1,0 +1,55 @@
+import java.io.*;
+public class notamakan
+ {
+
+     public static void main(String []args) throws Exception {
+    	BufferedReader br = new BufferedReader (new InputStreamReader (System.in)); 
+    		String no="";
+    		int jumlah1	= 0;
+    		int jumlah2	= 0;
+    		int jumlah3	= 0;
+    		int sotoayam	= 7000;
+    		int ikan	= 8000;
+    		int ayam	= 10000;
+    		int total1	= 0;
+    		int total2	= 0;
+    		int total3	= 0;
+    		int total4	= 0;
+    		int bayar	= 0;
+    		int kembali	= 0;
+    		
+    		
+    		System.out.println("=================================");
+			System.out.println("		Warung Sederhana \t	 ");
+			System.out.println("=================================");
+    		System.out.print("NO Nota: ");
+    		no=br.readLine();
+    		System.out.print("soto ayam yang dibeli (porsi)	: ");
+    		jumlah1=Integer.parseInt(br.readLine());
+    		System.out.print("nasi ikan yang dibeli (porsi)		: ");
+    		jumlah2=Integer.parseInt(br.readLine());
+    		System.out.print("nasi ayam yang dibeli (porsi)	: ");
+    		jumlah3=Integer.parseInt(br.readLine());
+    		total1	= jumlah1*sotoayam;
+    		total2	= jumlah2*ikan;
+    		total3	= jumlah3*ayam;
+    		
+    		System.out.println("Rincian Pembelian Nota" + no);
+    		System.out.println("+----------------------------------------------------------------------------------------+");
+    		System.out.println("| Barang yang dibeli | Jumlah     		| Harga Satuan \t    		| Total \t |");
+    		System.out.println("+----------------------------------------------------------------------------------------+");
+    		System.out.println("| Soto ayam             |"+"\t"+ jumlah1+" \t    |"+"\t"+sotoayam+"         	|"+"\t"+total1 );
+    		System.out.println("| Nasi Ikan              |"+"\t"+ jumlah2+" \t    |"+"\t"+ikan+"           |"+"\t"+total2 );
+    		System.out.println("| Nasi Ayam            |"+"\t"+ jumlah3+" \t    |"+"\t"+ayam+"         |"+"\t"+total3 );
+    		total4=total1+total2+total3;
+    		System.out.println("+----------------------------------------------------------------------------------------+");
+    		System.out.println("| Total Pembayaran                                  \t"+"= "+total4);
+    		System.out.print("| Uang Pembayaran                                   \t"+"= ");
+    		bayar=Integer.parseInt(br.readLine());
+    		kembali=bayar-total4;
+    		System.out.println("| Uang kembalian                                     \t"+"= "+kembali);
+    		System.out.println("+----------------------------------------------------------------------------------------+");
+     }
+    
+    
+}
